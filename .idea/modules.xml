@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/POM_nerki.iml" filepath="$PROJECT_DIR$/.idea/POM_nerki.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Kidney-3D-segmentation.iml" filepath="$PROJECT_DIR$/.idea/Kidney-3D-segmentation.iml" />
     </modules>
   </component>
 </project>

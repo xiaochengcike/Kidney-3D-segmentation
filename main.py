@@ -16,7 +16,7 @@ if Convert_DICOMS == True:       #
 ###########
 # LoadImg()
 # ShowImg()
-ShowHistogram()
+# ShowHistogram()
 
 #gui.window.go()
 

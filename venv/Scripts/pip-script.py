@@ -1,4 +1,4 @@
-#!E:\PythonProjects\POM_nerki\venv\Scripts\python.exe
+#!E:\PythonProjects\Kidney-3D-segmentation\venv\Scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'pip==10.0.1','console_scripts','pip'
 __requires__ = 'pip==10.0.1'
 import re

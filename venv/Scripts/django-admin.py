@@ -1,4 +1,4 @@
-#!E:\PythonProjects\POM_nerki\venv\Scripts\python.exe
+#!E:\PythonProjects\Kidney-3D-segmentation\venv\Scripts\python.exe
 from django.core import management
 
 if __name__ == "__main__":
