@@ -13,6 +13,9 @@ if Convert_DICOMS == True:       #
     from Convert_to_JPG import * #
 ##################################
 
+program = Window()
+#program.matplotCanvas()
+
 ###########
 # LoadImg()
 # ShowImg()
