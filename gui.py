@@ -9,25 +9,31 @@ from matplotlib import pyplot as plt
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 
+def changeSliceNumber(slc_num):
+    slc_num += 1
+    return slc_num
+
+
+
 class Window(Tk):
 
     def __init__(self):
         super(Window, self).__init__()
         self.title("Kidney 3D segmentation")
         self.minsize(640, 400)
-
         LoadImg()
-
         self.matplotCanvas()
-        mainloop()
 
     def matplotCanvas(self):
-        fig = Figure(figsize=(5, 5), dpi=100)
+        fig = Figure(figsize=(10, 6), dpi=100)
         sbplt = fig.add_subplot(111)
-        #sbplt.plot([1, 2, 3, 4], [5, 6, 7, 8])
         sbplt.imshow(images_jpg[slice_number], cmap=plt.cm.gist_gray)
 
         canvas = FigureCanvasTkAgg(fig, self)
         canvas.draw()
-        canvas.get_tk_widget().pack(side=BOTTOM, fill=BOTH, expand=True)
+        canvas.get_tk_widget().pack(side=RIGHT, fill=BOTH, expand=True)
 
+        scroll_bar = Scrollbar(self)
+        scroll_bar.pack(side=RIGHT, fill=Y)
+
+        mainloop()

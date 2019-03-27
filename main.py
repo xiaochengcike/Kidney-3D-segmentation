@@ -14,7 +14,6 @@ if Convert_DICOMS == True:       #
 ##################################
 
 program = Window()
-#program.matplotCanvas()
 
 ###########
 # LoadImg()

@@ -1,6 +1,6 @@
 from os import path
 
-slice_number = 140
+slice_number = 1
 
 #Ustawienie ścierzki do folderu z DICOMAMI
 program_folder = path.dirname(__file__)
