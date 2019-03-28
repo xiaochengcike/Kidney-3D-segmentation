@@ -1,7 +1,7 @@
 from load_image import *
 from histogram import *
-from gui import *
-
+#from gui import *
+import gui
 
 ##################################
 ######Konwersja DICOM na PNG######
@@ -11,7 +11,10 @@ if Convert_DICOMS == True:       #
     from Convert_to_JPG import * #
 ##################################
 
-program = Window()
+program = gui.Window()
+while True:
+    program.matplotCanvas()
+    program.update()
 
 ###########
 # LoadImg()
