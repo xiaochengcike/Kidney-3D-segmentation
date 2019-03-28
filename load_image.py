@@ -2,7 +2,7 @@ from settings import *
 from matplotlib import pyplot as plt
 import matplotlib.image as mpimg
 import pydicom as dicom
-from PIL import Image, ImageTk
+
 
 def LoadImg():
 

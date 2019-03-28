@@ -1,7 +1,5 @@
 from load_image import *
 from histogram import *
-import tkinter as tk
-import gui
 from gui import *
 
 

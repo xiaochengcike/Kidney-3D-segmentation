@@ -1,18 +1,10 @@
-from appJar import gui
 from load_image import *
 from histogram import *
 from settings import slice_number
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from tkinter import *
-import tkinter as tk
 from matplotlib import pyplot as plt
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
-
-def changeSliceNumber(slc_num):
-    slc_num += 1
-    return slc_num
-
 
 
 class Window(Tk):
@@ -29,11 +21,19 @@ class Window(Tk):
         sbplt = fig.add_subplot(111)
         sbplt.imshow(images_jpg[slice_number], cmap=plt.cm.gist_gray)
 
-        canvas = FigureCanvasTkAgg(fig, self)
-        canvas.draw()
-        canvas.get_tk_widget().pack(side=RIGHT, fill=BOTH, expand=True)
-
-        scroll_bar = Scrollbar(self)
+        scroll_bar = Scrollbar(self, orient=VERTICAL)
         scroll_bar.pack(side=RIGHT, fill=Y)
+
+        guise_img_list = Listbox(self, yscrollcommand=scroll_bar.set, height=30)
+        for i in range(len(images_jpg)):
+            guise_img_list.insert(END, "Przekrój nr. " + str(i))
+        guise_img_list.pack(side=RIGHT)
+        scroll_bar.config(command=guise_img_list.yview)
+
+        canvas = FigureCanvasTkAgg(fig, self)
+        canvas.get_tk_widget().pack(side=RIGHT)
+        canvas.draw()
+
+        current_place = guise_img_list.curselection()
 
         mainloop()
